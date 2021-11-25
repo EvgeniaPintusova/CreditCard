@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Credit card</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="credit_card_form" id="creditCardForm">
+        <h1 class="form_title">Payment form</h1>
+        <p class="form_input_container">
+          <label class="label_for_input" for="cardType">Card type:</label>
+          <select class="form_input" id="cardType" name="card_type">
+            <option disabled>choose the pay system type</option>
+            <option value=""></option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Master Card</option>
+            <option value="other">Other</option>
+          </select>
+        </p>
+        <p class="form_input_container">
+          <label class="label_for_input" for="number1">Number:</label>
+          <input
+            class="form_input form_input_short"
+            type="number"
+            id="number1"
+            name="card_number_1"
+            placeholder="XXXX"
+          />
+          <input
+            class="form_input form_input_short"
+            type="number"
+            id="number2"
+            name="card_number_2"
+            placeholder="XXXX"
+          />
+          <input
+            class="form_input form_input_short"
+            type="number"
+            id="number3"
+            name="card_number_3"
+            placeholder="XXXX"
+          />
+          <input
+            class="form_input form_input_short"
+            type="number"
+            id="number4"
+            name="card_number_4"
+            placeholder="XXXX"
+          />
+        </p>
+        <p class="form_input_container">
+          <label class="label_for_input" for="userName">User name:</label>
+          <input
+            class="form_input"
+            type="text"
+            id="userName"
+            name="card_username"
+            placeholder="ivan ivanovich"
+          />
+        </p>
+        <p class="form_input_container">
+          <label class="label_for_input" for="cardDateM">Date:</label
+          ><input
+            class="form_input form_input_short"
+            type="number"
+            min="1"
+            max="12"
+            id="dateMonth"
+            name="card_date_month"
+            placeholder="MM"
+          />
+          <span>/</span>
+          <input
+            class="form_input form_input_short"
+            type="number"
+            min="21"
+            max="23"
+            id="dateYear"
+            name="card_date_year"
+            placeholder="YY"
+          />
+        </p>
+        <p class="error_text" id="errorContainer">Please, check the data...</p>
+        <button class="form_button" id="buttonSave" type="submit">
+          Save card
+        </button>
+      </form>
+
+      <div class="credit_card_view" id="creditCardView">
+        <img class="card_chip" src="img/chip.png" alt="chip image" />
+        <img class="card_system" src="img/visa.png" alt="system logo" />
+        <p class="card_type">Master Card</p>
+        <p class="card_number">1111 3423 4356 7687</p>
+        <p class="card_date">
+          <span class="date_label"
+            >valid<br />
+            thru</span
+          >
+          <span class="date_value"><span id="monthValue">01</span>/<span id="yearValue">2021</span></span>
+        </p>
+        <p class="card_username">Evgeniya PIGCFHJNVCBVNM</p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
